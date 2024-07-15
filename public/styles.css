@@ -1,0 +1,213 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, wheat 50%);
+    min-height: 1000px;
+    font-family: cursive;
+    height: 100vhs;
+  }
+  
+  h1 {
+    color: wheat;
+    padding: 10px;
+  }
+  
+  .box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+ 
+  #heading {
+    background-color: #A683E3;
+    text-align: center;
+  }
+  
+  .item {
+    /* display: flex; */
+    background-color: #cbdccb;
+    min-height: 70px;
+     /* align-items: center; */
+    word-wrap: break-word;
+    border-bottom: 1px solid #F1F1F1;
+  }
+  
+   /* Existing styles for the delete links */
+li {
+  display: flex;
+  /* align-items: center; */
+  /* margin-bottom: 10px; */
+}
+
+a.delete-link {
+  margin-left: auto; /* Push the delete link to the right end */
+  color: red;
+  text-decoration: none;
+  margin-right: 0;
+  margin: 0;
+}
+
+/* Add media query for tablet and laptop screens */
+@media (max-width: 1024px) {
+  /* Style for tablet and laptop screens */
+  a.delete-link {
+    display: none; /* Hide the delete link */
+  }
+}
+
+/* Add media query for phone screens */
+@media (max-width: 768px) {
+  /* Style for phone screens */
+  a.delete-link {
+    display: inline-block; /* Display the delete link as a block */
+    margin-left: 10px; /* Add spacing between the task and the delete link */
+    font-size: 20px; /* Increase the font size for the minus sign */
+  }
+}
+
+  .sepdiv {
+    display: flex;
+    background-color: #cbdccb;
+    min-height: 70px;
+     align-items: center;
+     justify-content: center;
+    word-wrap: break-word;
+    border-bottom: 1px solid #F1F1F1;
+  }
+  .item:last-child {
+    border-bottom: 0;
+  }
+  
+  input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: red;
+  }
+  
+  input[type="checkbox"] + span::before {
+    content: "\2713"; /* Checkmark character */
+    
+    color: red;
+  }
+
+  input[type="checkbox"] {
+    color: red;
+    margin: 20px;
+  }
+  
+
+
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 200;
+    color: black;
+    max-width: 230px;
+    word-wrap: break-word;
+  }
+  
+  form.item {
+
+    text-align: center;
+    margin-left: 0px;
+  }
+  
+  button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #A683E3;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 6px;
+    border-width: 0;
+  }
+
+  .sepbut {
+    background-color: #A683E3;
+    color: wheat;
+    font-family: cursive;
+    font-size: medium;
+    width: 150px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    
+
+  }
+/*   
+.rt{
+  position: absolute;
+  right: 500px;
+} */
+
+ .delete-link {
+  color: red;
+  text-decoration: none;
+  margin-top: 10px;
+ }
+   
+  @media (max-width: 768px) {
+    .delete-link {
+      margin-left: 0;
+      margin-top: 5px; 
+    }
+  }
+
+
+  input[type="text"] {
+    color: black;
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #A683E3;
+  }
+  
+  ::placeholder {
+    font-family: cursive;
+    font-size: small;
+    color: #A683E3;
+    opacity: 1;
+  }
+  
+  footer {
+    color: white;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  
+
+
+
+/* Style for the alert message */
+.alert-message {
+  background-color: #cbdccb;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+
+
+
+/* Footer styles */
+
+
+  

@@ -1,0 +1,81 @@
+<%- include("header.ejs") %>
+<%- include ("navbar.ejs") %>
+
+
+<!-- Add this HTML element for the alert message (hidden by default) -->
+<div id="alert-message" class="alert-message" style="display: none;"></div>
+
+<div class="box" id="heading">
+    <h1>Set a task</h1>
+</div>
+
+
+
+<div class="box">
+    
+     <% weektasks.forEach(weektask => { %>
+    
+     
+     <form action="">
+        <div class="item">
+          
+         <li>
+            <input type="checkbox" name="checkbox" value="<%= "week" %>" >
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: center">
+            <p><span><%= weektask %></span></p>
+          
+           <!-- <div class="rt"> -->
+            <a href="/weekdelete/<%= weektask %>" class="delete-link">remove</a>
+          </div>
+           <!-- </div> -->
+        </li>
+        </div>
+        <input type="hidden" name="listName">
+   
+     </form>
+    
+    
+     <% }); %> 
+    <form action="/addweekTask" method="POST" class="item">
+        <input type="text" name="weektask" placeholder="Tap here to create a new item" required>
+         <button type="submit" >+</button>
+    </form>
+    <div class="sepdiv">
+        <form action="/save" method="POST">
+            <button class="sepbut" type="submit">save tasks</button>
+          </form>
+    </div>
+   
+</div>
+
+
+
+<script>
+    // Function to display the alert message
+    function showAlert(message) {
+      const alertMessage = document.getElementById('alert-message');
+      alertMessage.textContent = message;
+      alertMessage.style.display = 'block';
+      setTimeout(() => {
+        alertMessage.style.display = 'none';
+      }, 3000); // Hide the message after 3 seconds (adjust as needed)
+    }
+  
+    // Handle the form submission and display the alert
+    document.querySelector('form[action="/save"]').addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const response = await fetch('/save', {
+        method: 'POST',
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        showAlert(data.message);
+      } else {
+        showAlert('An error occurred while saving the task.');
+      }
+    });
+  </script>
+  
+<%- include("footer.ejs") %>

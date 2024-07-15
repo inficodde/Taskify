@@ -1,0 +1,10 @@
+ <%- include("header.ejs") %>
+  <div class="navbar">
+
+    <ul>
+      <li><a class="<%= active === 'Home' ? 'active' : '' %>" href="/">Home</a></li>
+      <li><a class="<%= active === 'Taskify' ? 'active' : '' %>" href="/week">Taskify</a></li>
+    </ul>
+
+  </div>
+ <%- include("footer.ejs") %>
